@@ -1,6 +1,8 @@
 import React from "react";
 import { FiLogIn } from "react-icons/fi";
 
+import { Link } from "react-router-dom";
+
 import {
   Container,
   LogoAll4All,
@@ -19,13 +21,13 @@ const Login = () => {
         <LogoAll4All src={logo} alt="All 4 All" />
         <form>
           <h1>Faz o teu login</h1>
-          <input type="text" placeholder="Inserir o e-mail" />
+          <input type="email" placeholder="Inserir o e-mail" />
           <Button type="submit">Entrar</Button>
 
-          <a href="">
+          <Link to="/register">
             <FiLogIn size={16} color="#0B99F8" />
             Não tenho registo
-          </a>
+          </Link>
         </form>
       </FormSection>
 
