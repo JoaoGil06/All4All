@@ -4,6 +4,7 @@ import GlobalStyles from "./styles/GlobalStyles";
 
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Login} />
           <Route path="/register" component={Register} />
+          <Route path="/profile" component={Profile} />
         </Switch>
       </BrowserRouter>
       <GlobalStyles />
