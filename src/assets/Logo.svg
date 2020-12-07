@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="235" height="136" viewBox="0 0 235 136">
+  <g id="Logo" transform="translate(-576 -265)">
+    <text id="ALL" transform="translate(579 336)" fill="#565656" font-size="40" font-family="OpenSans-BoldItalic, Open Sans" font-weight="700" font-style="italic"><tspan x="0" y="0">ALL</tspan></text>
+    <text id="ALL-2" data-name="ALL" transform="translate(644 372)" fill="#0b99f8" font-size="100" font-family="OpenSans-BoldItalic, Open Sans" font-weight="700" font-style="italic"><tspan x="0" y="0">ALL</tspan></text>
+    <text id="FOR" transform="translate(579 365)" fill="#565656" font-size="30" font-family="OpenSans-BoldItalic, Open Sans" font-weight="700" font-style="italic"><tspan x="0" y="0">FOR</tspan></text>
+  </g>
+</svg>

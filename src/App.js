@@ -1,5 +1,16 @@
+import React from "react";
+
+import GlobalStyles from "./styles/GlobalStyles";
+
+import Login from "./pages/Login";
+
 function App() {
-  return <h1>All 4 All</h1>;
+  return (
+    <>
+      <Login />
+      <GlobalStyles />
+    </>
+  );
 }
 
 export default App;
