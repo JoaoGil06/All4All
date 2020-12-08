@@ -27,6 +27,7 @@ const Profile = () => {
           description="Descrição teste"
           value="120,00 "
           id="1"
+          trash={true}
         />
 
         <Card
@@ -34,6 +35,7 @@ const Profile = () => {
           description="Descrição teste"
           value="120,00 "
           id="2"
+          trash={true}
         />
 
         <Card
@@ -41,6 +43,7 @@ const Profile = () => {
           description="Descrição teste"
           value="120,00 "
           id="3"
+          trash={true}
         />
 
         <Card
@@ -48,6 +51,7 @@ const Profile = () => {
           description="Descrição teste"
           value="120,00 "
           id="1"
+          trash={true}
         />
       </CasesList>
     </Container>

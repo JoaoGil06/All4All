@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { Container, TrashButton } from "./styles";
 
-const Card = ({ id, caseName, description, value }) => {
+const Card = ({ id, caseName, description, value, trash }) => {
   if (id) {
     return (
       <Container>
@@ -18,7 +18,7 @@ const Card = ({ id, caseName, description, value }) => {
           <strong>Valor:</strong>
           <p>{value}€</p>
 
-          <TrashButton />
+          {trash ? <TrashButton /> : ""}
         </Link>
       </Container>
     );
@@ -34,7 +34,7 @@ const Card = ({ id, caseName, description, value }) => {
         <strong>Valor:</strong>
         <p>{value}€</p>
 
-        <TrashButton />
+        {trash ? <TrashButton /> : ""}
       </Container>
     );
   }

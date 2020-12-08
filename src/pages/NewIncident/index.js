@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiArrowLeft } from "react-icons/fi";
 
 import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../context/auth";
+
+import { db } from "../../firebase";
 
 import {
   Container,
@@ -19,9 +21,24 @@ const NewIncident = () => {
   const { user } = useAuth();
   const history = useHistory();
 
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [valueIncident, setValueIncident] = useState("");
+
   if (!user) {
     history.push("/login");
   }
+
+  const handleRegisterIncident = (e) => {
+    e.preventDefault();
+
+    db.collection("incidents").doc(user.uid).set({
+      title: title,
+      description: description,
+      value: valueIncident,
+    });
+  };
+
   return (
     <Container>
       <Content>
@@ -40,11 +57,24 @@ const NewIncident = () => {
         </Section>
 
         <Form>
-          <input type="text" placeholder="Titulo do caso" />
-          <textarea placeholder="Descrição" />
-          <input type="number" placeholder="Valor em €uros" />
+          <input
+            type="text"
+            placeholder="Titulo do caso"
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <textarea
+            placeholder="Descrição"
+            onChange={(e) => setDescription(e.target.value)}
+          />
+          <input
+            type="number"
+            placeholder="Valor em €uros"
+            onChange={(e) => setValueIncident(e.target.value)}
+          />
 
-          <Button type="submit">Registar</Button>
+          <Button type="submit" onClick={handleRegisterIncident}>
+            Registar
+          </Button>
         </Form>
       </Content>
     </Container>
