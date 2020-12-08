@@ -14,7 +14,7 @@ import {
 
 import logo from "../../assets/Logo.svg";
 
-const Register = () => {
+const newIncident = () => {
   return (
     <Container>
       <Content>
@@ -26,17 +26,16 @@ const Register = () => {
             casos na tua IPSS.
           </p>
 
-          <Link to="/">
+          <Link to="/profile">
             <FiArrowLeft size={16} color="#0B99F8" />
-            Voltar para Login
+            Voltar para profile
           </Link>
         </Section>
 
         <Form>
-          <input type="text" placeholder="Nome da IPSS" />
-          <input type="email" placeholder="E-mail" />
-          <input type="text" placeholder="Contacto" />
-          <input type="text" placeholder="Cidade" />
+          <input type="text" placeholder="Titulo do caso" />
+          <textarea placeholder="Descrição" />
+          <input type="number" placeholder="Valor em €uros" />
 
           <Button type="submit">Registar</Button>
         </Form>
@@ -45,4 +44,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default newIncident;

@@ -6,17 +6,30 @@ export const Container = styled.li`
   padding: 24px;
   border-radius: 8px;
   position: relative;
+  transition: box-shadow ease 0.5s;
 
+  &:hover {
+    box-shadow: 5px 5px 10px #01395f;
+  }
+
+  & > a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  & > a > strong,
   & > strong {
     display: block;
     margin-bottom: 8px;
     color: #41414d;
   }
 
+  & > a > p + strong,
   & > p + strong {
     margin-top: 16px;
   }
 
+  & > a > p,
   & > p {
     color: #737380;
     line-height: 21px;

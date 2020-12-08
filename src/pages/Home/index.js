@@ -15,7 +15,7 @@ import Card from "../../components/Card";
 
 import logo from "../../assets/Logo.svg";
 
-const Profile = () => {
+const Home = () => {
   return (
     <Container>
       <Header>
@@ -38,7 +38,7 @@ const Profile = () => {
         </div>
       </Header>
 
-      <h1>Casos</h1>
+      <h1>Todos os casos</h1>
       <hr />
       <CasesList>
         <Card
@@ -66,11 +66,11 @@ const Profile = () => {
           caseName="Caso teste"
           description="Descrição teste"
           value="120,00 "
-          id="1"
+          id="4"
         />
       </CasesList>
     </Container>
   );
 };
 
-export default Profile;
+export default Home;

@@ -9,13 +9,15 @@ import {
   LogoAll4All,
   LogoutButton,
   CasesList,
+  Contacts,
+  Button,
 } from "./styles";
 
 import Card from "../../components/Card";
 
 import logo from "../../assets/Logo.svg";
 
-const Profile = () => {
+const Incident = () => {
   return (
     <Container>
       <Header>
@@ -37,40 +39,25 @@ const Profile = () => {
           </LogoutButton>
         </div>
       </Header>
-
-      <h1>Casos</h1>
-      <hr />
       <CasesList>
         <Card
           caseName="Caso teste"
           description="Descrição teste"
           value="120,00 "
-          id="1"
-        />
-
-        <Card
-          caseName="Caso teste"
-          description="Descrição teste"
-          value="120,00 "
-          id="2"
-        />
-
-        <Card
-          caseName="Caso teste"
-          description="Descrição teste"
-          value="120,00 "
-          id="3"
-        />
-
-        <Card
-          caseName="Caso teste"
-          description="Descrição teste"
-          value="120,00 "
-          id="1"
         />
       </CasesList>
+
+      <hr />
+      <Contacts>
+        <h1>Queres ajudar a resolver este problema?</h1>
+        <h2>Contamos contigo!</h2>
+        <div>
+          <Button>Telemóvel</Button>
+          <Button>E-mail</Button>
+        </div>
+      </Contacts>
     </Container>
   );
 };
 
-export default Profile;
+export default Incident;
