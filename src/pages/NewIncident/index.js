@@ -1,7 +1,8 @@
 import React from "react";
 import { FiArrowLeft } from "react-icons/fi";
 
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { useAuth } from "../../context/auth";
 
 import {
   Container,
@@ -14,7 +15,13 @@ import {
 
 import logo from "../../assets/Logo.svg";
 
-const newIncident = () => {
+const NewIncident = () => {
+  const { user } = useAuth();
+  const history = useHistory();
+
+  if (!user) {
+    history.push("/login");
+  }
   return (
     <Container>
       <Content>
@@ -44,4 +51,4 @@ const newIncident = () => {
   );
 };
 
-export default newIncident;
+export default NewIncident;

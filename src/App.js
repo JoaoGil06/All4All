@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import GlobalStyles from "./styles/GlobalStyles";
 
@@ -9,7 +9,15 @@ import Profile from "./pages/Profile";
 import Incident from "./pages/Incident";
 import NewIncident from "./pages/NewIncident";
 
+import { useAuth, checkAuthChanged } from "./context/auth";
+
 function App() {
+  const { setUser } = useAuth();
+
+  useEffect(() => {
+    checkAuthChanged(setUser);
+  }, [setUser]);
+
   return (
     <>
       <BrowserRouter>
@@ -18,8 +26,8 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/profile" component={Profile} />
-          <Route path="/incidents/incident" component={Incident} />
           <Route path="/incidents/new" component={NewIncident} />
+          <Route path="/incidents/incident" component={Incident} />
         </Switch>
       </BrowserRouter>
       <GlobalStyles />
